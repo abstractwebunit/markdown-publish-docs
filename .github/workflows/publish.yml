@@ -23,7 +23,7 @@ jobs:
       - name: Build RU (root)
         run: >-
           npx --yes @abstractwebunit/markdown-publish build
-          --vault vault --out _site
+          --vault vault/ru --out _site
           --base-href "/markdown-publish-docs/"
           --site-url "$BASE"
           --site-name markdown-publish --site-lang ru
@@ -31,7 +31,7 @@ jobs:
       - name: Build EN
         run: >-
           npx --yes @abstractwebunit/markdown-publish build
-          --vault vault-en --out _site/en
+          --vault vault/en --out _site/en
           --base-href "/markdown-publish-docs/en/"
           --site-url "$BASE/en"
           --site-name markdown-publish --site-lang en --home "Welcome"
@@ -39,7 +39,7 @@ jobs:
       - name: Build ES
         run: >-
           npx --yes @abstractwebunit/markdown-publish build
-          --vault vault-es --out _site/es
+          --vault vault/es --out _site/es
           --base-href "/markdown-publish-docs/es/"
           --site-url "$BASE/es"
           --site-name markdown-publish --site-lang es --home "Bienvenido"
@@ -47,7 +47,7 @@ jobs:
       - name: Build DE
         run: >-
           npx --yes @abstractwebunit/markdown-publish build
-          --vault vault-de --out _site/de
+          --vault vault/de --out _site/de
           --base-href "/markdown-publish-docs/de/"
           --site-url "$BASE/de"
           --site-name markdown-publish --site-lang de --home "Willkommen"
@@ -55,7 +55,7 @@ jobs:
       - name: Build FR
         run: >-
           npx --yes @abstractwebunit/markdown-publish build
-          --vault vault-fr --out _site/fr
+          --vault vault/fr --out _site/fr
           --base-href "/markdown-publish-docs/fr/"
           --site-url "$BASE/fr"
           --site-name markdown-publish --site-lang fr --home "Bienvenue"
@@ -63,7 +63,7 @@ jobs:
       - name: Build ZH
         run: >-
           npx --yes @abstractwebunit/markdown-publish build
-          --vault vault-zh --out _site/zh
+          --vault vault/zh --out _site/zh
           --base-href "/markdown-publish-docs/zh/"
           --site-url "$BASE/zh"
           --site-name markdown-publish --site-lang zh --home "欢迎"

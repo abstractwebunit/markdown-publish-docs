@@ -4,4 +4,4 @@
 
 **Читать:** https://abstractwebunit.github.io/markdown-publish-docs/
 
-Сайт документации собирается из `vault/` самим markdown-publish (см. `.github/workflows/publish.yml`) — это живое демо.
+Сайт документации собирается из одного хранилища `vault/` (языки — папки: ru, en, es, de, fr, zh) самим markdown-publish (см. `.github/workflows/publish.yml`) — это живое демо.
