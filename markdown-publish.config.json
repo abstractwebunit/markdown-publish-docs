@@ -1,0 +1,7 @@
+{
+  "siteName": "markdown-publish",
+  "siteDescription": "Опубликуй свой Obsidian/Markdown-vault как быстрый статический сайт — за пару кликов. Поиск, граф связей, canvas-доски.",
+  "siteLang": "ru",
+  "vaultDir": "vault",
+  "out": "dist"
+}
