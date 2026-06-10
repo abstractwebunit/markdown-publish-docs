@@ -18,6 +18,8 @@
   <a href="https://abstractwebunit.github.io/markdown-publish-docs/zh/">中文</a>
 </p>
 
+![The docs site — search, link graph, canvas](https://raw.githubusercontent.com/abstractwebunit/markdown-publish/main/.github/media/home.png)
+
 The docs site is built **by markdown-publish itself** from the single vault in this repo (`vault/`, one folder per language) via the public GitHub Action — so it doubles as a live demo of search, the link graph and canvas boards.
 
 | Folder | Language |
