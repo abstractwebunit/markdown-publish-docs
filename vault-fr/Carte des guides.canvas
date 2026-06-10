@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    { "id": "start", "type": "text", "x": -340, "y": -120, "width": 300, "height": 130, "text": "# Départ\nJe veux un site à partir de mes notes — **en quelques clics**.", "color": "4" },
+    { "id": "quick", "type": "file", "x": 60, "y": -300, "width": 340, "height": 200, "file": "publication/En quelques clics.md" },
+    { "id": "config", "type": "file", "x": 60, "y": 60, "width": 340, "height": 200, "file": "réglages/Configuration.md" },
+    { "id": "repo", "type": "link", "x": 520, "y": -120, "width": 300, "height": 130, "url": "https://github.com/abstractwebunit/markdown-publish" },
+    { "id": "g", "type": "group", "x": -400, "y": -360, "width": 1280, "height": 700, "label": "La carte des guides est un vrai .canvas : déplace et redimensionne les cartes" }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "start", "toNode": "quick", "fromSide": "right", "toSide": "left", "toEnd": "arrow", "label": "publie" },
+    { "id": "e2", "fromNode": "start", "toNode": "config", "fromSide": "right", "toSide": "left", "toEnd": "arrow", "label": "configure" },
+    { "id": "e3", "fromNode": "quick", "toNode": "repo", "fromSide": "right", "toSide": "top", "color": "1", "label": "code" }
+  ]
+}

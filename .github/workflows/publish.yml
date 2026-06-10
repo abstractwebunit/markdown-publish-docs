@@ -10,18 +10,67 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: true
+env:
+  BASE: https://abstractwebunit.github.io/markdown-publish-docs
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: abstractwebunit/markdown-publish@v1
+      - uses: actions/setup-node@v4
         with:
-          vault-dir: vault
-          base-href: "/markdown-publish-docs/"
-          site-url: "https://abstractwebunit.github.io/markdown-publish-docs"
-          site-name: markdown-publish
-          site-lang: ru
+          node-version: '22'
+      - name: Build RU (root)
+        run: >-
+          npx --yes @abstractwebunit/markdown-publish build
+          --vault vault --out _site
+          --base-href "/markdown-publish-docs/"
+          --site-url "$BASE"
+          --site-name markdown-publish --site-lang ru
+          --site-description "Опубликуй свой Obsidian/Markdown-vault как быстрый статический сайт — за пару кликов. Поиск, граф связей, canvas-доски."
+      - name: Build EN
+        run: >-
+          npx --yes @abstractwebunit/markdown-publish build
+          --vault vault-en --out _site/en
+          --base-href "/markdown-publish-docs/en/"
+          --site-url "$BASE/en"
+          --site-name markdown-publish --site-lang en --home "Welcome"
+          --site-description "Publish your Obsidian/Markdown vault as a fast static site — in a couple of clicks. Search, link graph, canvas boards."
+      - name: Build ES
+        run: >-
+          npx --yes @abstractwebunit/markdown-publish build
+          --vault vault-es --out _site/es
+          --base-href "/markdown-publish-docs/es/"
+          --site-url "$BASE/es"
+          --site-name markdown-publish --site-lang es --home "Bienvenido"
+          --site-description "Publica tu vault de Obsidian/Markdown como un sitio estático rápido — en un par de clics. Búsqueda, grafo de enlaces, tableros canvas."
+      - name: Build DE
+        run: >-
+          npx --yes @abstractwebunit/markdown-publish build
+          --vault vault-de --out _site/de
+          --base-href "/markdown-publish-docs/de/"
+          --site-url "$BASE/de"
+          --site-name markdown-publish --site-lang de --home "Willkommen"
+          --site-description "Veröffentliche deinen Obsidian-/Markdown-Vault als schnelle statische Website — mit wenigen Klicks. Suche, Linkgraph, Canvas-Boards."
+      - name: Build FR
+        run: >-
+          npx --yes @abstractwebunit/markdown-publish build
+          --vault vault-fr --out _site/fr
+          --base-href "/markdown-publish-docs/fr/"
+          --site-url "$BASE/fr"
+          --site-name markdown-publish --site-lang fr --home "Bienvenue"
+          --site-description "Publiez votre vault Obsidian/Markdown comme un site statique rapide — en quelques clics. Recherche, graphe de liens, tableaux canvas."
+      - name: Build ZH
+        run: >-
+          npx --yes @abstractwebunit/markdown-publish build
+          --vault vault-zh --out _site/zh
+          --base-href "/markdown-publish-docs/zh/"
+          --site-url "$BASE/zh"
+          --site-name markdown-publish --site-lang zh --home "欢迎"
+          --site-description "把你的 Obsidian/Markdown 笔记库发布为快速的静态网站——只需几次点击。支持搜索、关系图谱和 Canvas 白板。"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
   deploy:
     needs: build
     runs-on: ubuntu-latest

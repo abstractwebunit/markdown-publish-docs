@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    { "id": "start", "type": "text", "x": -340, "y": -120, "width": 300, "height": 130, "text": "# 开始\n想把笔记变成网站——**只需几次点击**。", "color": "4" },
+    { "id": "quick", "type": "file", "x": 60, "y": -300, "width": 340, "height": 200, "file": "发布/几次点击搞定.md" },
+    { "id": "config", "type": "file", "x": 60, "y": 60, "width": 340, "height": 200, "file": "设置/配置.md" },
+    { "id": "repo", "type": "link", "x": 520, "y": -120, "width": 300, "height": 130, "url": "https://github.com/abstractwebunit/markdown-publish" },
+    { "id": "g", "type": "group", "x": -400, "y": -360, "width": 1280, "height": 700, "label": "指南地图是一个真实的 .canvas 文件:卡片可以拖动和缩放" }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "start", "toNode": "quick", "fromSide": "right", "toSide": "left", "toEnd": "arrow", "label": "去发布" },
+    { "id": "e2", "fromNode": "start", "toNode": "config", "fromSide": "right", "toSide": "left", "toEnd": "arrow", "label": "去配置" },
+    { "id": "e3", "fromNode": "quick", "toNode": "repo", "fromSide": "right", "toSide": "top", "color": "1", "label": "代码" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    { "id": "start", "type": "text", "x": -340, "y": -120, "width": 300, "height": 130, "text": "# Start\nI want a site from my notes — **in a couple of clicks**.", "color": "4" },
+    { "id": "quick", "type": "file", "x": 60, "y": -300, "width": 340, "height": 200, "file": "publishing/In a Couple of Clicks.md" },
+    { "id": "config", "type": "file", "x": 60, "y": 60, "width": 340, "height": 200, "file": "setup/Configuration.md" },
+    { "id": "repo", "type": "link", "x": 520, "y": -120, "width": 300, "height": 130, "url": "https://github.com/abstractwebunit/markdown-publish" },
+    { "id": "g", "type": "group", "x": -400, "y": -360, "width": 1280, "height": 700, "label": "The guide map is a live .canvas: drag and resize the cards" }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "start", "toNode": "quick", "fromSide": "right", "toSide": "left", "toEnd": "arrow", "label": "publish" },
+    { "id": "e2", "fromNode": "start", "toNode": "config", "fromSide": "right", "toSide": "left", "toEnd": "arrow", "label": "configure" },
+    { "id": "e3", "fromNode": "quick", "toNode": "repo", "fromSide": "right", "toSide": "top", "color": "1", "label": "code" }
+  ]
+}
