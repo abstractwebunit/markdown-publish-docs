@@ -24,6 +24,7 @@
 | Camino | Dificultad | Guía |
 |---|---|---|
 | Botón de Netlify / Vercel | 2 clics | [[En un par de clics]] |
+| Tu vault existente → GitHub | 10 minutos, sin terminal | [[Tu vault existente en GitHub]] |
 | Plantilla + GitHub Pages | 3–4 clics | [[GitHub Pages]] |
 | Tu propio repositorio + workflow | para quien conoce git | [[GitHub Pages]] |
 | Cloudflare Pages | un par de minutos | [[Cloudflare Pages]] |

@@ -24,6 +24,7 @@
 | Path | Difficulty | Guide |
 |---|---|---|
 | Netlify / Vercel button | 2 clicks | [[In a Couple of Clicks]] |
+| Your existing vault → GitHub | 10 minutes, no terminal | [[Your Existing Vault on GitHub]] |
 | Template + GitHub Pages | 3–4 clicks | [[GitHub Pages]] |
 | Your own repo + workflow | for those who know git | [[GitHub Pages]] |
 | Cloudflare Pages | a couple of minutes | [[Cloudflare Pages]] |
